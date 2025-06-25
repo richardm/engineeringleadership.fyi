@@ -1,0 +1,21 @@
+:root {
+  --disabled-color: var(--sl-color-gray-4);
+  --coming-soon-color: var(--sl-color-blue-high);
+}
+
+:root[data-theme="light"],
+[data-theme="light"] {
+  --disabled-color: var(--sl-color-gray-5);
+  --coming-soon-color: var(--sl-color-blue);
+}
+
+.disabled {
+  color: var(--disabled-color);
+  .title {
+    color: var(--disabled-color);
+  }
+  .coming-soon {
+    color: var(--coming-soon-color);
+    font-weight: 600;
+  }
+}

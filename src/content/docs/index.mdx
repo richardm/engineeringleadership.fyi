@@ -1,36 +1,145 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Engineering Leadership Handbook
+description: An objective, structured, and community-curated reference for engineering leadership at every level — from Senior+ ICs to first-time managers to seasoned VPs.
 template: splash
+banner:
+  content: June 25th, 2025 — engineeringleadership.fyi is now live. More content coming soon!
+lastUpdated: 2025-06-25
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: A reference for engineering leaders at all levels — grounded in systems thinking, human behavior, and real-world experience.
+  # image:
+  #   file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    # - text: Explore Tenets
+    #   link: /tenets/
+    #   icon: right-arrow
+    - text: Explore Laws
+      link: /laws/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    # - text: Explore Practices
+    #   link: /practices/
+    #   icon: right-arrow
+    - text: About the Handbook
+      link: /about/
       variant: minimal
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
+import { LinkButton } from "@astrojs/starlight/components";
 
-## Next steps
+## What You’ll Find Here
 
-<CardGrid stagger>
-  <Card title="Update content" icon="pencil">
-    Edit `src/content/docs/index.mdx` to see this page change.
-  </Card>
-  <Card title="Add new content" icon="add-document">
-    Add Markdown or MDX files to `src/content/docs` to create new pages.
-  </Card>
-  <Card title="Configure your site" icon="setting">
-    Edit your `sidebar` and other config in `astro.config.mjs`.
-  </Card>
-  <Card title="Read the docs" icon="open-book">
-    Learn more in [the Starlight Docs](https://starlight.astro.build/).
+### The Foundation
+
+These are universal in nature and provide the foundation for all other layers.
+
+<CardGrid>
+  <div class="disabled">
+    <Card title="First Principles" icon="lightbulb">
+      <p>
+        Universal truths about leadership, systems thinking, and human behavior
+        — foundational ideas that guide how great leaders operate.
+      </p>
+      {/* <LinkButton href="/principles/" disabled>Explore principles →</LinkButton> */}
+      <span class="coming-soon">Coming soon!</span>
+    </Card>
+  </div>
+  <Card title="Laws" icon="document">
+    <p>
+      Well-known patterns and system laws observed in organizations, from
+      Conway's Law to Goodhart's Law — each grounded in research or real-world
+      experience.
+    </p>
+    <LinkButton href="/laws/">Explore laws →</LinkButton>
   </Card>
 </CardGrid>
+
+### Context-Specific Guidance
+
+These are context-specific and provide guidance for how to proceed in specific situations.
+
+<CardGrid>
+  <div class="disabled">
+    <Card title="Values" icon="heart">
+      <p>
+        Values are the abstract ideas we hold most dear. Values inform our
+        beliefs and guide our actions. Principles and tenets flow from our
+        values and describe how we put them into practice. Every company chooses
+        and prioritizes its values, but the set of distinct values to draw from
+        is finite.
+      </p>
+      <p>
+        This section captures the vast majority of common values with reasons
+        for and against. As values are context-specific, these are meant as a
+        resource for you to draw from when deciding your own organization's
+        values rather than a recommendation.
+      </p>
+      {/* <LinkButton href="/values/">Explore values →</LinkButton> */}
+      <span class="coming-soon">Coming soon!</span>
+    </Card>
+  </div>
+  <div class="disabled">
+    <Card title="Tenets" icon="scale">
+      <p>
+        Great tenets provide clear direction for how to proceed when forced to
+        choose between competing values. They provide a clear guidance for what
+        your organization should prioritize. As tenets are based in values and
+        context-specific needs, you must choose the tenets which are
+        most-applicable to your organization's needs.
+      </p>
+      <p>
+        While tenets are not universal, many common tenets have stood the test
+        of time. Here we attempt to present a balanced view as well as
+        guidelines of when to consider adopting them for your organization.
+      </p>
+      {/* <LinkButton href="/tenets/">Explore tenets →</LinkButton> */}
+      <span class="coming-soon">Coming soon!</span>
+    </Card>
+  </div>
+  <div class="disabled">
+    <Card title="Recommended Practices" icon="check">
+      <p>
+        Repeatable leadership behaviors and implementation patterns — from
+        “never surprise someone in a review” to “run skip-levels quarterly.”
+      </p>
+      {/* <LinkButton href="/practices/">Explore practices →</LinkButton> */}
+      <span class="coming-soon">Coming soon!</span>
+    </Card>
+  </div>
+  <Card title="Books & Resources" icon="open-book">
+    <p>
+      A curated list of engineering leadership books for new and experienced
+      managers.
+    </p>
+    <LinkButton href="/resources/books/">Explore books →</LinkButton>
+  </Card>
+</CardGrid>
+
+## Designed for engineering leaders at all levels
+
+- **Senior+ Engineers** who influence others without formal authority
+- **Engineering Managers** seeking clarity and confidence
+- **Directors, VPs, and CTOs** who want to document, teach, or challenge leadership beliefs
+- **Leadership coaches and community contributors** who want a structured way to engage
+
+## What it is
+
+- A curated set of foundational truths, laws, and principles spanning behavioral psychology, human nature, communication, leadership, management, and engineering.
+- A trusted, open resource grounded in universal truths, not opinion.
+- A foundation others can cite, disagree with, or expand upon.
+- A community-curated reference
+
+## What it's not
+
+- How To's for implementing specific patterns.
+- Architecture or low-level code quality advice. This is out of scope, and there
+  are many excellent resources for that.
+
+## Why this exists
+
+The Engineering Leadership Handbook exists to help technical leaders:
+
+- Make better decisions by understanding universal and contextual truths
+- Communicate more clearly using shared language and documented tradeoffs
+- Contribute to a larger body of knowledge without reinventing the wheel
+- In particular, this is a resource the project creator wishes existed when they were first learning about leadership

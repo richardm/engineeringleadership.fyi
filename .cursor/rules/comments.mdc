@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Inline and block comments beginning with "FYI" are intended as a permanent reference for developers. Never remove these.

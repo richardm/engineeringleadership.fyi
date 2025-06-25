@@ -17,6 +17,7 @@ export default defineConfig({
     }),
     starlight({
       title: "Engineering Leadership Handbook",
+      customCss: ["./src/styles/global.css"],
       editLink: {
         baseUrl:
           "https://github.com/richardm/engineeringleadership.fyi/edit/main/",
@@ -35,33 +36,37 @@ export default defineConfig({
         },
       ],
       sidebar: [
-        {
-          label: "Universal Principles",
-          autogenerate: { directory: "universal-principles" },
-        },
+        // {
+        //   label: "Universal Principles",
+        //   autogenerate: { directory: "universal-principles" },
+        // },
         {
           label: "Laws",
           autogenerate: { directory: "laws" },
         },
+        // {
+        //   label: "Tenets",
+        //   autogenerate: { directory: "tenets" },
+        // },
         {
-          label: "Tenets",
-          autogenerate: { directory: "tenets" },
+          label: "Principles",
+          autogenerate: { directory: "principles" },
         },
-        {
-          label: "Contextual Principles",
-          autogenerate: { directory: "contextual-principles" },
-        },
-        {
-          label: "Values",
-          autogenerate: { directory: "values" },
-        },
-        {
-          label: "Practices",
-          autogenerate: { directory: "practices" },
-        },
+        // {
+        //   label: "Contextual Principles",
+        //   autogenerate: { directory: "contextual-principles" },
+        // },
+        // {
+        //   label: "Values",
+        //   autogenerate: { directory: "values" },
+        // },
+        // {
+        //   label: "Practices",
+        //   autogenerate: { directory: "practices" },
+        // },
         {
           label: "Books & Resources",
-          autogenerate: { directory: "books" },
+          autogenerate: { directory: "resources" },
         },
       ],
       // items: [
