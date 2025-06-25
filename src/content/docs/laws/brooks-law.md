@@ -4,7 +4,7 @@ title: Brooks' Law
 
 ## Summary
 
-Adding manpower to a late software project makes it later.
+Adding manpower to a late software project makes it later, due to increased communication paths `n(n–1)/2`.
 
 ## Origin
 

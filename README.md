@@ -1,54 +1,82 @@
-# Starlight Starter Kit: Basics
+# The Engineering Leadership Handbook
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+An **objective, structured, and community-curated reference** for engineering leadership at every level — from Staff+ ICs to first-time managers to seasoned VPs.
 
-```
-npm create astro@latest -- --template starlight
-```
+---
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+## 🎯 Vision
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The Engineering Leadership Handbook codifies:
 
-## 🚀 Project Structure
+- ✅ Universal truths about leadership, human behavior, and systems thinking
+- ✅ Widely recognized laws and patterns used in technical organizations (e.g., Conway’s Law, Goodhart’s Law)
+- ✅ Contextual but well-reasoned tenets, with tradeoffs and limitations made explicit
+- ✅ A shared library of values, practices, and principles drawn from real leaders and teams
+- ✅ Curated references, company examples, and case studies — all linked to their sources
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+> This is not a rulebook. It's a **modular reference** to help leaders make better decisions, communicate clearly, and reflect on their values and practices.
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+---
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## 🧠 Who It's For
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+This resource is designed for:
 
-Static assets, like favicons, can be placed in the `public/` directory.
+- Senior and Staff+ Engineers taking on informal leadership roles
+- First-time and early-career Engineering Managers
+- Directors, VPs, and CTOs seeking to refine their leadership philosophy
+- Communities, startups, and companies defining their leadership culture
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## 📚 Site Structure
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Relative to the `content/docs/` directory:
 
-## 👀 Want to learn more?
+| Section         | Description                                                          |
+| --------------- | -------------------------------------------------------------------- |
+| `principles/`   | General truths and leadership beliefs (universal or contextual)      |
+| `tenets/`       | Value trade-offs between valid options (e.g., “clarity over speed”)  |
+| `laws/`         | Named, observed patterns in systems and organizations                |
+| `practices/`    | Prescriptive behaviors or leadership moves, often opinionated        |
+| `values/`       | Foundational values organizations draw from when shaping culture     |
+| `books/`        | Curated list of leadership books with summaries and external reviews |
+| `case-studies/` | Real-world leadership challenges and how they were addressed         |
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+---
+
+## 🤝 Contributing
+
+We welcome thoughtful contributions! All contributions must:
+
+- Be grounded in observed practice, published literature, or real-world experience
+- Remain objective, cite sources when applicable, and avoid prescriptions without context
+- Respect the structure and tone of the project
+
+> ✍️ **Start by reviewing our [CONTRIBUTING.md](./CONTRIBUTING.md)** for details on content format, structure, and how to submit a pull request.
+
+---
+
+## 💡 Guiding Philosophy
+
+- 🚫 No dogma — only decisions, tradeoffs, and context
+- ✅ All ideas are open to refinement and community review
+- 🧠 Clarity, curiosity, and citation over ego or absolutism
+
+---
+
+## 🔗 Live Site
+
+Visit the live handbook at: [https://engineeringleadership.fyi](https://engineeringleadership.fyi)
+
+---
+
+## 📣 Want to Share?
+
+If you write about a principle, law, or practice from this site on your blog, newsletter, or company wiki — feel free to link to it. We may even include it on the relevant page under “Community Commentary.”
+
+---
+
+## 📜 License
+
+Content is licensed under [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Contributions must follow the same license.

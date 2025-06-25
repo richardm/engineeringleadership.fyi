@@ -1,0 +1,81 @@
+---
+title: Homegrown Solutions Are Never Free
+description: Avoid building internal replacements for third-party solutions in generic or supporting domains — no matter how “quick” or “cheap” it appears.
+---
+
+import { LinkCard } from "@astrojs/starlight/components";
+
+Avoid building internal replacements for third-party solutions in generic or supporting domains — no matter how “quick” or “cheap” it appears.
+
+This principle flows from first principles thinking rooted in [Teslar's Law](/laws/teslers-law), Domain-Driven Design, and the Efficient Market Hypothesis.
+
+## The False Economy of Homegrown Solutions
+
+The developer says:
+
+> “I can build a quick email queue / logging layer / metrics collector in an afternoon.”
+
+And they can — 80% of it.
+
+The business thinks:
+
+> “Why pay $50/month for a vendor when we can do it in-house?”
+
+In build vs buy decisions, a naive view is to consider only the cost of buying. An improved analysis considers the cost of buying vs the time value of the cost of building and maintaining. But even this often overlooks a key point: the irreducible essential complexity of the task at hand. Quick homegrown solutions are quick and alluring (initially) precisely because they deal with the happy path rather than solving the difficult essential complexity. But Tesler's Law tells us that ignoring it doesn't make it go away.
+
+Deciding to build a homegrown solution is deciding to own all of its irreducible essential complexity--complexity which could otherwise be outsourced to a third-party library or service. In order to accurately compare the cost of build vs buy, it's critical to first understand the nature of the essential complexity required.
+
+A recent trap here is developers deciding that "S3 is too expensive for my use case" and deciding to move out of the cloud. S3 is clearly expensive if you overlook the essential complexity inherent in providing durable, highly available filestorage. But you don't need that, rather than building a homegrown storage solution, look for a vendor which provides lower durability or availability guarantees.
+
+<LinkCard
+  title="Teslar's Law in Action: How S3 hides essential complexity"
+  href="/case-studies/essential-complexity-s3"
+/>
+
+That "free" build introduces essential complexity you now own forever, and the time saved upfront is dwarfed by cumulative long-term drag. Supporting it long-term means:
+
+- On-call responsibility
+- Bug fixes
+- Feature creep
+- Monitoring and observability
+- Unexpected edge cases
+
+## Tesler's Law in Action
+
+You didn't eliminate essential complexity. You moved it into your stack, and you now own it, maintain it, and pay for it in team capacity, context switching, and incident response.
+
+## Domain-Driven Design Reinforces This
+
+According to Domain-Driven Design:
+
+- Your team should focus its energy on core domains where complexity is part of your unique value.
+- In generic or supporting domains, you should offload complexity whenever possible.
+
+So unless you're building an email delivery business, writing a mail queue is a distraction, not a differentiator.
+
+## The Cost of Misplaced Optimization
+
+Every hour spent building a non-core tool is an hour not spent shipping product value.
+
+You're trading one-time vendor cost for ongoing internal cost in:
+
+- Engineering time
+- Cognitive load
+- Bus factor risk
+- Repeated reinvention
+
+## Market Efficiency
+
+If a $20/month SaaS vendor has survived in the market, they likely:
+
+- Solved the problem better
+- Absorbed more complexity
+- Optimized for scale, security, and edge cases
+- Proved demand through paying customers
+
+If their solution looks too expensive, you're likely underestimating the true complexity.
+
+## In Summary
+
+Unless it's part of your **core domain**, never build an internal replacement for an external service just because it seems quick or cheap.
+While it may appear cheap in the short term, you're increasing the irreducible complexity of your system and taking on the cost of maintaining it indefinitely.

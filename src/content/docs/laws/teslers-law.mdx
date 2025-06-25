@@ -1,0 +1,84 @@
+---
+title: Tesler’s Law (Law of Conservation of Complexity)
+description: Every application must have an inherent amount of irreducible complexity. The only question is who will have to deal with it.
+---
+
+import { LinkCard } from "@astrojs/starlight/components";
+
+## Summary
+
+> **“Every application has some irreducible amount of essential complexity. The only question is who will have to deal with it.”**
+
+Essential complexity refers to the inherent difficulty of the real-world task itself, not the code, system, or UI per se. The core idea is that you can't eliminate essential complexity, you can only move it between system and user.
+
+There are two types of complexity in software:
+
+| Type                  | Meaning                                                                                | Can it be eliminated?                                   |
+| --------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Essential complexity  | Comes from the nature of the problem you’re solving. It’s unavoidable.                 | ❌ No — only shifted or made more manageable            |
+| Accidental complexity | Comes from how you choose to solve it — bad tools, poor abstractions, convoluted code. | ✅ Yes — through better design, tools, and abstractions |
+
+## Real-world example
+
+**Task: Planning a walking route from point A to point B with waypoints.**
+
+- **Essential complexity:** The user’s intent, constraints (e.g. avoid hills, see landmarks), waypoints, route logic — this is real-world messy stuff. You can’t eliminate the fact that this task is inherently complex.
+- **System design goal:** Hide that complexity from the user. Maybe use a map API, optimize routes, and generate a smooth UX. You write a lot of code to reduce what the user sees.
+- **The Law of Conservation of Complexity:** Reminds us that this complexity still exists somewhere — now it’s in your backend, algorithms, UI, or data prep.
+
+**Why this matters:**
+
+When someone says “just make it simple,” they might not realize:
+_You can simplify the interface, but you cannot avoid the complexity of the real-world problem._
+
+If you oversimplify, you risk hiding necessary control from the user. If you under-simplify, you dump complexity on the user. Tesler’s Law reminds us that good design is about managing this tradeoff — intentionally deciding where that complexity lives.
+
+## So what can be reduced?
+
+You can:
+
+- Eliminate **accidental complexity** — things like bad abstractions, redundant steps, or poor architecture.
+- Organize, shift, hide, or chunk **essential complexity** — breaking things into simpler subproblems or intuitive flows.
+- Improve interfaces and create workflows so complexity feels manageable.
+
+But you can’t eliminate the inherent difficulty of some problems. For example, distributed consensus, identity verification, or optimizing logistics — these have irreducible parts that must be dealt with somewhere.
+
+## Derived Principles and Corollaries
+
+### Complexity must go somewhere
+
+If a system appears simple to the user, it is because someone else (usually the developer or designer) is absorbing that complexity.
+
+- Implication: You’re not eliminating complexity — you’re choosing who carries the burden.
+- Example: Apple’s iPhone setup is deceptively simple. But making it that easy took enormous engineering effort behind the scenes.
+
+### Shifting complexity should be a deliberate tradeoff
+
+Moving complexity from the user to the system is good only if the system can handle it more effectively than the user could.
+
+- Implication: Sometimes exposing complexity is better — for power users or edge cases.
+- Example: Command-line tools expose raw power, but require expertise. GUI tools hide more complexity, but may limit flexibility.
+
+### Hiding complexity without solving it creates fragile systems
+
+If you hide complexity without understanding or managing it, you risk failure modes that are hard to debug or recover from.
+
+- Implication: “Magic” systems that are “too easy” may mask deep complexity that explodes under pressure.
+- Example: Auto-scaling cloud infrastructure that fails to scale under unexpected load because the complexity was hidden, not handled.
+
+### Great Abstractions Handle Essential Complexity while avoiding accidental complexity
+
+A great abstraction handles essential complexity in a way that aligns with the user's goals while minimizing accidental complexity. Not all complexity is bad. Good design decisions are about when to surface complexity and when to hide it. For example, ORMs greatly simplify data access but are sometimes criticized for hiding too much complexity. SQL abstracts data access but still lets advanced users write expressive queries.
+
+<LinkCard
+  title="Teslar's Law in Action: How S3 hides essential complexity"
+  href="/case-studies/essential-complexity-s3"
+/>
+
+## Origins
+
+Bruce Tognazzini credited this to Larry Tesler, a pioneer of human-computer interaction, circa 1980s.
+
+## Still Applicable?
+
+Yes. Especially relevant in UX, platform design, and API ergonomics.
