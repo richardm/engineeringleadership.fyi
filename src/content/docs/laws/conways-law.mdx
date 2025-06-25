@@ -1,0 +1,60 @@
+---
+title: Conway's Law
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+## Summary
+
+Systems mirror the communication structures of the teams that build them.
+
+## Origin
+
+> "Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure." - Melvin Conway
+
+Originally published in [How do Committees Invent? by Melvin E. Conway](https://www.melconway.com/Home/Committees_Paper.html). Later dubbed Conway's Law by Fred Brooks in the Mythical Man-Month.
+
+## Still Applicable?
+
+Yes. Stronger than ever in distributed teams.
+
+## Context Notes
+
+[Conway's Law](https://www.melconway.com/Home/Conways_Law.html) reminds us that technical architecture and organizational structure are deeply intertwined. If your teams are siloed, your architecture will reflect those silos — often with painful consequences. _This law is especially relevant when adopting microservices, distributed systems, or platform teams._ To avoid unnecessary friction, leaders must intentionally shape team boundaries, communication paths, and incentives to reflect — or influence — the system architecture they want to see.
+
+This law also underpins the value of cross-functional teams and platform consistency efforts. The inverse is also true: poorly aligned team structures will often sabotage even the best technical intentions.
+
+## Conway's Corollary
+
+Multiple people have pointed out that Conway's Law has at least one corollary:
+
+“People will adapt the explicit systems they got to fit the implicit real-world business concepts.” - Sven Balnojan[^1]
+
+"If a system is designed in a manner that is the antithesis to the structure of its supporting teams, the system will fail." - Keith Chester[^2]
+
+## Related Principles
+
+The _Inverse Conway Maneuver_ is an organizational design strategy that intentionally flips Conway’s Law on its head. The term was first coined by Johnny LeRoy and Matt Simons in December 2010 and was further popularized by Matthew Skelton and Manuel Pais in their book _Team Topologies_ in 2019.
+
+## Citations
+
+- [Conway's Law | Melvin Conway's Homepage](https://www.melconway.com/Home/Conways_Law.html)
+- [Conway's law | Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_law)
+
+[^1]: [How Conways Corollary Wrecks Your Data Organization](https://medium.com/data-science/how-conways-corollary-wrecks-your-data-organization-c81d0b134230) by Sven Balnojan
+[^2]: [Conway's Corollary](https://hlfshell.ai/posts/conways-corollary/) by Keith Chester
+
+## Related Community Articles
+
+<Aside type="caution" title="Community Articles">
+  These are articles written by the community are provided as a resource for
+  additional reading and may not reflect the views of this project's
+  maintainers. To propose a link to add to this list, click Edit page and open a
+  PR.
+</Aside>
+
+- https://martinfowler.com/bliki/ConwaysLaw.html
+- [Inverse Conway Maneuver](https://jonnyleroy.com/2011/02/03/dealing-with-creaky-legacy-platforms/) by Jonny LeRoy and Matt Simons (ThoughtWorks)
+- Case Study: [The influence of organizational structure on software quality: an empirical case study](https://dl.acm.org/doi/10.1145/1368088.1368160) by Nachiappan Nagappan, Brendan Murphy, Victor Basili
+- [Conway's Corollary](https://ianbicking.org/blog/2015/08/conways-corollary) by Ian Bicking
+- [How Conways Corollary Wrecks Your Data Organization](https://medium.com/data-science/how-conways-corollary-wrecks-your-data-organization-c81d0b134230)
